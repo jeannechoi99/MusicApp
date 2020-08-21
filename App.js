@@ -1,40 +1,14 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View,  } from 'react-native';
+import { Container, Header, Left, Body, Right, Title } from 'native-base';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>HomeScreen</Text>
-    </View>
-  );
-}
-
-function PlaylistScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>PlaylistScreen</Text>
-    </View>
-  );
-}
-
-function CommunityScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>CommunityScreen</Text>
-    </View>
-  );
-}
-
-function SettingsScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>SettingsScreen</Text>
-    </View>
-  );
-}
+import HomeScreen from './screens/Home';
+import PlaylistScreen from './screens/Playlist';
+import CommunityScreen from './screens/Community';
+import SettingsScreen from './screens/Settings';
 
 const Drawer = createDrawerNavigator();
 
