@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
-import { Container, Header, Left, Body, Right, Title } from 'native-base';
+import { Header } from 'react-native-elements'; 
 
 export default class HeaderTitleExample extends Component {
   render() {
     return (
-      <Container>
-        <Header>
-          <Left/>
-          <Body>
-            <Title>Header</Title>
-          </Body>
-          <Right/>
-        </Header>
-      </Container>
+      <Header
+        centerComponent={{ text: '앱이름', style: { color: '#fff' }}}
+        containerStyle={{backgroundColor: '#c5a8ff'}}
+      />
     );
   }
 }
