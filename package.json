@@ -15,6 +15,7 @@
     "@react-native-firebase/app": "8.3.1",
     "@react-navigation/drawer": "5.9.0",
     "@react-navigation/native": "5.7.3",
+    "faker": "4.1.0",
     "native-base": "2.13.14",
     "react": "16.13.1",
     "react-native": "0.63.2",
@@ -23,7 +24,8 @@
     "react-native-reanimated": "1.13.0",
     "react-native-safe-area-context": "3.1.6",
     "react-native-screens": "2.10.1",
-    "react-native-vector-icons": "7.0.0"
+    "react-native-vector-icons": "7.0.0",
+    "recyclerlistview": "3.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.11.1",
