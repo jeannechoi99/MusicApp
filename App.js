@@ -1,7 +1,4 @@
 import * as React from 'react';
-import { Text, View,  } from 'react-native';
-import { Container, Header, Left, Body, Right, Title } from 'native-base';
-import Ionicons from 'react-native-vector-icons/Ionicons'
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -16,14 +13,10 @@ export default function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={HomeScreen} 
-          options={{drawerIcon:({size}) => (<Ionicons name="home-outline" size={size}/>)}}/>
-        <Drawer.Screen name="Playlist" component={PlaylistScreen} 
-          options={{drawerIcon:({size}) => (<Ionicons name="list" size={size}/>)}}/>
-        <Drawer.Screen name="Community" component={CommunityScreen} 
-          options={{drawerIcon:({size}) => (<Ionicons name="musical-notes-outline" size={size}/>)}}/>
-        <Drawer.Screen name="Settings" component={SettingsScreen} 
-          options={{drawerIcon:({size}) => (<Ionicons name="settings-outline" size={size}/>)}}/>
+        <Drawer.Screen name="Home" component={HomeScreen} />
+        <Drawer.Screen name="Playlist" component={PlaylistScreen} />
+        <Drawer.Screen name="Community" component={CommunityScreen} />
+        <Drawer.Screen name="Settings" component={SettingsScreen} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
