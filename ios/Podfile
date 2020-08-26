@@ -31,3 +31,5 @@ target 'MusicApp-tvOS' do
     # Pods for testing
   end
 end
+
+pod 'Firebase/Analytics'
