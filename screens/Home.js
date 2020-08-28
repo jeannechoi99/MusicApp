@@ -11,7 +11,7 @@ export default class HeaderTitleExample extends Component {
     super(props);
 
     const fakeData = [];
-    for(i = 0; i < 100; i+= 1) {
+    for (i = 0; i < 100; i += 1) {
       fakeData.push({
         type: 'NORMAL',
         item: {
@@ -30,11 +30,11 @@ export default class HeaderTitleExample extends Component {
       return this.state.list.getDataForIndex(i).type;
     }, (type, dim) => {
       switch (type) {
-        case 'NORMAL': 
+        case 'NORMAL':
           dim.width = 150;
           dim.height = 200;
           break;
-        default: 
+        default:
           dim.width = 0;
           dim.height = 0;
           break;
@@ -45,11 +45,11 @@ export default class HeaderTitleExample extends Component {
       return this.state.list.getDataForIndex(i).type;
     }, (type, dim) => {
       switch (type) {
-        case 'NORMAL': 
+        case 'NORMAL':
           dim.width = SCREEN_WIDTH;
           dim.height = 70;
           break;
-        default: 
+        default:
           dim.width = 0;
           dim.height = 0;
           break;
@@ -60,7 +60,7 @@ export default class HeaderTitleExample extends Component {
   rowRenderertop = (type, data) => {
     const { image, name, description } = data.item;
     return (
-      <View style={{margin: 10}}>
+      <View style={{ margin: 10 }}>
         <Image style={styles.image} source={{ uri: image }} />
       </View>
     )
@@ -69,7 +69,7 @@ export default class HeaderTitleExample extends Component {
     const { image, name, description } = data.item;
     return (
       <View style={styles.listItem}>
-        <Image style={{height: 50, width: 50}} source={{ uri: image }} />
+        <Image style={{ height: 50, width: 50 }} source={{ uri: image }} />
         <View style={styles.body}>
           <Text style={styles.name}>{name}</Text>
           <Text style={styles.description}>{description}</Text>
@@ -82,33 +82,33 @@ export default class HeaderTitleExample extends Component {
     return (
       <View style={styles.container}>
         <Header
-        centerComponent={{ text: '앱이름', style: { color: '#fff' }}}
-        containerStyle={{backgroundColor: '#c5a8ff'}}
+          centerComponent={{ text: '앱이름', style: { color: '#fff' } }}
+          containerStyle={{ backgroundColor: '#c5a8ff' }}
         />
-        <Text style={{fontSize: 30, fontWeight: 'bold', margin: 15, textAlign: 'center'}}>"오늘 당신의 그 눈물이 미래의 기쁨의 땀이 될터이니..."</Text>
-        <Text style={{marginLeft: 10}}>[TOP 100]</Text>
-        <View style={{flex: 0.4}}>
+        <Text style={{ fontSize: 30, fontWeight: 'bold', margin: 15, textAlign: 'center' }}>"오.."</Text>
+        <Text style={{ marginLeft: 10 }}>[TOP 100]</Text>
+        <View style={{ flex: 0.4 }}>
           <RecyclerListView
-            style={{flex: 1}}
-            isHorizontal= {true}
+            style={{ flex: 1 }}
+            isHorizontal={true}
             rowRenderer={this.rowRenderertop}
             dataProvider={this.state.list}
             layoutProvider={this.layoutProvidertop}
           />
         </View>
-        <View style={{justifyContent: 'flex-end', flexDirection: 'row'}}>
-          <TouchableOpacity style={{margin: 5}}>
+        <View style={{ justifyContent: 'flex-end', flexDirection: 'row' }}>
+          <TouchableOpacity style={{ margin: 5 }}>
             <Text>최신순</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={{margin: 5}}>
+          <TouchableOpacity style={{ margin: 5 }}>
             <Text>과거순</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={{margin: 5}}>
+          <TouchableOpacity style={{ margin: 5 }}>
             <Text>인기순</Text>
           </TouchableOpacity>
         </View>
         <RecyclerListView
-          style={{flex: 1}}
+          style={{ flex: 1 }}
           rowRenderer={this.rowRendererbottom}
           dataProvider={this.state.list}
           layoutProvider={this.layoutProviderbottom}
